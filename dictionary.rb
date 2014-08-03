@@ -12,7 +12,7 @@ def main_menu
 		if user_choice == 'a'
 			add_word
 		elsif user_choice =='l'
-			list_words
+			puts Word.list_words
 		elsif user_choice == 'r'	
 			remove_word
 		elsif user_choice == 'x'
