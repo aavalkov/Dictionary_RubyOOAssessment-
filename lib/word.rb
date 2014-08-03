@@ -8,12 +8,12 @@ class Word
 		@@dictionary << self
 	end
 
+	def name
+			@name
+	end
+
 	def Word.dictionary
 		@@dictionary
-	end	
-
-	def name
-		@name
 	end	
 
 	def Word.list_words
@@ -23,6 +23,9 @@ class Word
 		end
 		result	
 	end		
+
+	# def Word.remove_word
+		
 
 	def add_definitions(definition)
 		@definitions << definition
