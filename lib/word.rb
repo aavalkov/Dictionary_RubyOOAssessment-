@@ -12,6 +12,10 @@ class Word
 			@name
 	end
 
+	def definitions
+		@definitions
+	end	
+
 	def Word.dictionary
 		@@dictionary
 	end	
@@ -23,9 +27,6 @@ class Word
 		end
 		result	
 	end		
-
-	# def Word.remove_word
-		
 
 	def add_definitions(definition)
 		@definitions << definition

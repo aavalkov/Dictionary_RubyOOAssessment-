@@ -13,10 +13,12 @@ def main_menu
 			add_word
 		elsif user_choice =='l'
 			puts Word.list_words
-			puts "Press 'd' to add a definition or any other letter to return to the main menu"
+			puts "Press 'd' to add a definition, 's' to show a word's and definition, or any other letter to return to the main menu"
 			definition_choice = gets.chomp
 			if definition_choice == 'd'
 				add_definition
+			elsif definition_choice == 's'
+				list_all
 			else
 				next
 			end		
@@ -39,11 +41,21 @@ def add_word
 end	
 
 def add_definition
-	puts "Enter te number of the word that you'd like to add a definition to:"
+	puts "Enter the number of the word that you'd like to add a definition to:"
 	word_choice = gets.chomp.to_i
 	puts "Enter the definition:"
 	user_definition = gets.chomp
 	@dictionary[word_choice-1].add_definitions(Definition.new(user_definition))
 end	
+
+def list_all
+	puts Word.list_words
+	puts "Enter the number of the word that you'd like to view"
+	word_number = gets.chomp.to_i
+	@dictionary[word_number-1].definitions.each do |definition|
+		puts definition.description
+	end	
+end	
+
 
 main_menu
