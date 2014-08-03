@@ -7,6 +7,11 @@ describe 'Word' do
 		new_word = Word.new('Dinosaur') 
 		new_word.should be_an_instance_of Word
 	end
+
+	it 'adds a definition to word' do
+		new_word = Word.new('Dinosaur') 
+		new_word.add_definitions('My favorite animal').should eq ['My favorite animal']
+	end	
 end		
 
 describe 'Definition' do

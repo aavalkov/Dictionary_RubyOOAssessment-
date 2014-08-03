@@ -1,7 +1,9 @@
 class Definition
-	attr_reader (:description)
 	def initialize(description)
 		@description = description
 	end
 
+	def description
+		@description
+	end	
 end	
