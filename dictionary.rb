@@ -1,6 +1,8 @@
 require './lib/word'
 require './lib/definition'
 
+@dictionary = []
+
 def main_menu
 	loop do
 		puts "Welcome to dictionary"
@@ -21,4 +23,12 @@ def main_menu
 		end						
 	end
 end	
+
+def add_word
+	puts "Enter the name of the word"
+	user_word = gets.chomp
+	@dictionary << Word.new(user_word)
+	puts "Your word has been added"
+end	
+
 main_menu
