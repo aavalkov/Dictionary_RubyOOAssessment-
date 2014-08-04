@@ -26,7 +26,7 @@ class Word
 			result += "#{index+1}. #{word.name} \n"
 		end
 		result	
-	end		
+	end	
 
 	def add_definitions(definition)
 		@definitions << definition
