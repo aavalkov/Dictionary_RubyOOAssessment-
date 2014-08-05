@@ -18,15 +18,10 @@ describe 'Word' do
 		new_word = Word.new('Dinosaur') 
 		new_word.add_definitions('My favorite animal').should eq ['My favorite animal']
 	end	
-
-	it 'lists all of the words in the dictionary' do
-		new_word = Word.new('Dinosaur') 
-		anoteher_new_word = Word.new('T-Rex')
-		Word.list_words.should eq "1. Dinosaur 2.T-Rex" 	
-	end
 end		
 
 describe 'Definition' do
+	
 	it 'is initialized with a definition' do
 		new_definition = Definition.new('My favorite animal')
 		new_definition.should be_an_instance_of Definition
